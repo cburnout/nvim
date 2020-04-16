@@ -45,6 +45,8 @@ Plug 'Yggdroot/indentLine'
 "Autoformat
 Plug 'Chiel92/vim-autoformat'
 
+" COLOR SCHEMES GALLOR
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 " Coc Config
@@ -67,6 +69,8 @@ let g:coc_global_extensions = [
 
 " Tagbar config
 
+"Colorschemes
+colorscheme minimalist
 
 if has('mouse')
   set mouse=a
