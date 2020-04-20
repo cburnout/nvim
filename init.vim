@@ -47,6 +47,10 @@ Plug 'Chiel92/vim-autoformat'
 
 " COLOR SCHEMES GALLOR
 Plug 'rafi/awesome-vim-colorschemes'
+
+"verilog plugin
+Plug 'vhda/verilog_systemverilog.vim'
+
 call plug#end()
 
 " Coc Config
@@ -58,10 +62,9 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-yank'
   \ ]
-" Remap for rename current word
 " Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <A-PageDown> <Plug>(coc-diagnostic-prev)
+nmap <silent> <A-PageUp> <Plug>(coc-diagnostic-next)
 "
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -180,20 +183,21 @@ nmap ,c :Commands<CR>
 " Black Config
 
 " NerdCommenter Config
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
 " Tagbar config
+" toggle tagbar display
+map <F4> :TagbarToggle<CR>
+" autofocus on tagbar open
+let g:tagbar_autofocus = 1
 
 "Colorschemes
-colorscheme minimalist
+colorscheme gruvbox
 
 if has('mouse')
   set mouse=a
 endif
-
-set undofile
-set undodir=~/.config/nvim/undos
-set undolevels=1000
-set undoreload=10000
 
 " If you want to ALWAYS use the clipboard for ALL operations (as opposed
 " to interacting with the '+' and/or '*' registers explicitly), set the
