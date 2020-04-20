@@ -51,6 +51,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 "verilog plugin
 Plug 'vhda/verilog_systemverilog.vim'
 
+" vim_numbertoggle
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 call plug#end()
 
 " Coc Config
@@ -255,3 +258,5 @@ noremap > >gv
 nnoremap gp p`[v`]
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
+
+set number relativenumber
