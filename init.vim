@@ -260,3 +260,8 @@ vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
 
 set number relativenumber
+
+:set autowrite
+:au FocusLost * Black
+:au FocusLost * Isort
+:au FocusLost * :wa
