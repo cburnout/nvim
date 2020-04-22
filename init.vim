@@ -27,9 +27,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-"Isort 
-Plug 'fisadev/vim-isort'
-
 "Black formating stuff, Pinned to commit cause it might be wrong
 Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' } 
 
@@ -56,6 +53,9 @@ Plug 'vhda/verilog_systemverilog.vim'
 
 " vim_numbertoggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"Isort 
+Plug 'stsewd/isort.nvim'
+
 
 call plug#end()
 
