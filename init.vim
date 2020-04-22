@@ -27,6 +27,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+"Isort 
+Plug 'fisadev/vim-isort'
+
 "Black formating stuff, Pinned to commit cause it might be wrong
 Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' } 
 
@@ -58,13 +61,13 @@ call plug#end()
 
 " Coc Config
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-python',
-  \ 'coc-git',
-  \ 'coc-json',
-  \ 'coc-yank'
-  \ ]
+            \ 'coc-snippets',
+            \ 'coc-pairs',
+            \ 'coc-python',
+            \ 'coc-git',
+            \ 'coc-json',
+            \ 'coc-yank'
+            \ ]
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> <A-PageDown> <Plug>(coc-diagnostic-prev)
 nmap <silent> <A-PageUp> <Plug>(coc-diagnostic-next)
@@ -79,11 +82,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 "
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction
 "
 " Highlight the symbol and its references when holding the cursor.
@@ -97,11 +100,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 "
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 "
 " Applying codeAction to the selected region.
@@ -199,7 +202,7 @@ let g:tagbar_autofocus = 1
 colorscheme gruvbox
 
 if has('mouse')
-  set mouse=a
+    set mouse=a
 endif
 
 " If you want to ALWAYS use the clipboard for ALL operations (as opposed
@@ -265,3 +268,4 @@ set number relativenumber
 :au FocusLost * Black
 :au FocusLost Isort
 :au FocusLost * :wa
+set scrolloff=5
