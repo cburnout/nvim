@@ -266,6 +266,6 @@ set number relativenumber
 
 :set autowrite
 :au FocusLost * Black
-:au FocusLost Isort
+:au FocusLost * Isort
 :au FocusLost * :wa
 set scrolloff=5
