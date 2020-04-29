@@ -2,7 +2,7 @@ if has('mouse')
     set mouse=a
 endif
 
-let mapleader = "\<Space>" 
+"let mapleader = "\<SPACE>" 
 
 " If you want to ALWAYS use the clipboard for ALL operations (as opposed
 " to interacting with the '+' and/or '*' registers explicitly), set the

@@ -1,5 +1,4 @@
-" Coc Config
-let g:coc_global_extensions = [
+" Coc Configlet g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-pairs',
             \ 'coc-python',
@@ -35,7 +34,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
@@ -46,13 +44,6 @@ augroup mygroup
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -134,6 +125,7 @@ let g:NERDDefaultAlign = 'left'
 " Tagbar config
 " toggle tagbar display
 map <F4> :TagbarToggle<CR>
+
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 
@@ -141,6 +133,33 @@ let g:tagbar_autofocus = 1
 colorscheme gruvbox
 
 "Goyo
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=5
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+nmap <leader>g :Goyo<CR>
 
 "Limelight
 " Color name (:help cterm-colors) or ANSI code
