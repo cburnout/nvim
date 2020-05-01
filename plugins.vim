@@ -130,6 +130,7 @@ map <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " Semshi settings
+let g:semshi#error_sign = v:false
 nmap <silent> <leader>ee :Semshi error<CR>
 nmap <silent> <leader>rr :Semshi rename<CR>
 

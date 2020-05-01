@@ -66,4 +66,13 @@ Plug 'junegunn/goyo.vim'
 " Limelight
 Plug 'junegunn/limelight.vim'
 
+" Vim Notes
+Plug 'xolox/vim-notes'
+
+" Vim Notes
+Plug 'xolox/vim-misc'
+
+" Startify
+Plug 'mhinz/vim-startify'
+
 call plug#end()
