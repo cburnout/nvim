@@ -23,12 +23,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"fuzzy file finder 
+"fuzzy file finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 "Black formating stuff, Pinned to commit cause it might be wrong
-Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' } 
+Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' }
 
 " Code commenter
 Plug 'preservim/nerdcommenter'
@@ -54,7 +54,7 @@ Plug 'vhda/verilog_systemverilog.vim'
 " vim_numbertoggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-"Isort 
+"Isort
 Plug 'stsewd/isort.nvim'
 
 " semshi
