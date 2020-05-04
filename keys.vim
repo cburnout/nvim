@@ -6,4 +6,3 @@ noremap > >gv
 nnoremap gp p`[v`]
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
-
