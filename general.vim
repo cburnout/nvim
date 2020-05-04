@@ -54,7 +54,8 @@ set updatetime=300
 
 set number relativenumber
 
-":set autowrite
+" This trims whitespace before calling anything else.
+" It kinda is a hack so Isort doesnt change cursor position
 function TrimEndLines()
     let save_cursor = getpos(".")
     silent! %s#\($\n\s*\)\+\%$##
