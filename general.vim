@@ -54,9 +54,13 @@ set updatetime=300
 
 set number relativenumber
 
-:set autowrite
-:au FocusLost * Black
-:au FocusLost * Isort
-:au FocusLost * Semshi enable
-:au FocusLost * :wa
+":set autowrite
+autocmd BufLeave,FocusLost * silent! Black
+autocmd BufLeave,FocusLost * silent! Isort
+autocmd BufLeave,FocusLost * silent! Semshi enable
+autocmd BufLeave,FocusLost * silent! wall
+":au FocusLost * Black
+":au FocusLost * Isort
+":au FocusLost * Semshi enable
+":au FocusLost * :wa
 set scrolloff=5
