@@ -61,15 +61,16 @@ function TrimEndLines()
     silent! %s#\($\n\s*\)\+\%$##
     call setpos('.', save_cursor)
 endfunction
-"autocmd BufWritePre,FocusLost * call TrimEndLines()
-"autocmd FocusLost * silent! :%s/\s\+$//e
+autocmd BufWritePre,FocusLost * call TrimEndLines()
+autocmd FocusLost * silent! :%s/\s\+$//e
 "autocmd FocusLost *.py silent! Black
 "autocmd FocusLost *.py silent! Isort
 "autocmd FocusLost * silent! :wa
-autocmd BufLeave,FocusLost * silent! Semshi enable
-:au FocusLost * Black
-:au FocusLost * Isort
-:au FocusLost * Semshi enable
-:au FocusLost * silent! :wa
-:au FocusLost * :e!
+
+"autocmd FocusLost * silent! Semshi enable
+":au FocusLost * Black
+":au FocusLost * Isort
+":au FocusLost * Semshi enable
+":au FocusLost * silent! :wa
+":au FocusLost * :e!
 set scrolloff=5

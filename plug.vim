@@ -77,4 +77,7 @@ Plug 'vimwiki/vimwiki'
 " Startify
 Plug 'mhinz/vim-startify'
 
+" Autosave
+Plug '907th/vim-auto-save'
+
 call plug#end()
