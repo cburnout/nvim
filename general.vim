@@ -70,5 +70,6 @@ autocmd BufLeave,FocusLost * silent! Semshi enable
 :au FocusLost * Black
 :au FocusLost * Isort
 :au FocusLost * Semshi enable
-:au FocusLost * :wa
+:au FocusLost * silent! :wa
+:au FocusLost * :e!
 set scrolloff=5
