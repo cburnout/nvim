@@ -7,3 +7,4 @@ nnoremap gp p`[v`]
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
 map <silent> <F9> :source $HOME/.config/nvim/init.vim<CR>
+noremap <silent> <F8> :let @+=expand("%:p")<CR>
