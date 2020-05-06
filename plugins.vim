@@ -9,3 +9,4 @@ source $HOME/.config/nvim/plug_config/gruvbox.vim
 source $HOME/.config/nvim/plug_config/limelight.vim
 source $HOME/.config/nvim/plug_config/startify.vim
 source $HOME/.config/nvim/plug_config/nerdcommenter.vim
+source $HOME/.config/nvim/plug_config/vimwiki.vim
