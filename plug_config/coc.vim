@@ -10,6 +10,8 @@
 nmap <silent> <A-PageDown> <Plug>(coc-diagnostic-prev)
 nmap <silent> <A-PageUp> <Plug>(coc-diagnostic-next)
 
+"function! s:references()
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -28,10 +30,13 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" Refactor code
+vmap <leader>rv <Plug>(coc-refactor)
 
 " Formatting selected code.
 nmap <leader>f  <Plug>(coc-format-selected)

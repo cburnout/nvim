@@ -1,7 +1,6 @@
 " Semshi settings
 let g:semshi#error_sign = v:false
-nmap <silent> <leader>ee :Semshi error<CR>
-nmap <silent> <leader>rr :Semshi rename<CR>
+let g:semshi#always_update_all_highlights = v:true
 
 " Custom highlighting
 function! MyHighlights() abort
@@ -38,7 +37,6 @@ function! MyHighlights() abort
     hi semshiSelf            ctermfg=109 guifg=#85a598
     hi semshiSelected        ctermfg=255 guifg=#ffffff ctermbg=240 guibg=#d7005f
 endfunction
-
 augroup MyColors
     autocmd!
     autocmd ColorScheme * call MyHighlights()
