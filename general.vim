@@ -68,9 +68,11 @@ autocmd FocusLost * silent! :%s/\s\+$//e
 "autocmd FocusLost * silent! :wa
 
 "autocmd FocusLost * silent! Semshi enable
-":au FocusLost * Black
-":au FocusLost * Isort
-":au FocusLost * Semshi enable
-":au FocusLost * silent! :wa
-":au FocusLost * :e!
+:au FocusLost *.py Black
+:au FocusLost *.py Isort
+:au FocusLost * Semshi enable
+:au FocusLost * silent! :wa
+:au FocusLost * :e!
 set scrolloff=5
+
+"autocmd CursorHold,BufLeave,FocusLost,WinLeave * :call Autoformat()
