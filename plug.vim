@@ -77,7 +77,19 @@ Plug 'vimwiki/vimwiki'
 " Startify
 Plug 'mhinz/vim-startify'
 
-" Autosave
-Plug '907th/vim-auto-save'
+"" Autosave
+"Plug '907th/vim-auto-save'
+
+" vim fountain
+Plug 'kblin/vim-fountain'
+
+" vim quickscope
+Plug 'unblevable/quick-scope'
+
+" vim floatterm
+Plug 'voldikss/vim-floaterm'
+
+" vim whichkey
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
