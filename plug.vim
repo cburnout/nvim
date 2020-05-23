@@ -92,4 +92,8 @@ Plug 'voldikss/vim-floaterm'
 " vim whichkey
 Plug 'liuchengxu/vim-which-key'
 
+" vim ranger
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 call plug#end()
