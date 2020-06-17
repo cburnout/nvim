@@ -2,8 +2,6 @@ if has('mouse')
     set mouse=a
 endif
 
-"let mapleader = "\<SPACE>"
-
 " If you want to ALWAYS use the clipboard for ALL operations (as opposed
 " to interacting with the '+' and/or '*' registers explicitly), set the
 " following option:
@@ -56,23 +54,26 @@ set number relativenumber
 
 " This trims whitespace before calling anything else.
 " It kinda is a hack so Isort doesnt change cursor position
-function TrimEndLines()
-    let save_cursor = getpos(".")
-    silent! %s#\($\n\s*\)\+\%$##
-    call setpos('.', save_cursor)
-endfunction
-autocmd BufWritePre,FocusLost * call TrimEndLines()
-autocmd FocusLost * silent! :%s/\s\+$//e
+"function TrimEndLines()
+"    let save_cursor = getpos(".")
+"    silent! %s#\($\n\s*\)\+\%$##
+"    call setpos('.', save_cursor)
+"endfunction
+""autocmd BufWritePre,FocusLost * call TrimEndLines()
+"autocmd FocusLost * silent! :%s/\s\+$//e
 "autocmd FocusLost *.py silent! Black
 "autocmd FocusLost *.py silent! Isort
 "autocmd FocusLost * silent! :wa
 
 "autocmd FocusLost * silent! Semshi enable
-:au FocusLost *.py Black
-:au FocusLost *.py Isort
-:au FocusLost * Semshi enable
-:au FocusLost * silent! :wa
-:au FocusLost * :e!
+":au FocusLost *.py Black
+":au FocusLost *.py Isort
+":au FocusLost * Semshi enable
+":au FocusLost * silent! :wa
+":au FocusLost * :e!
 set scrolloff=5
-
+set wrap
+set linebreak
+set textwidth=0
+set wrapmargin=0
 "autocmd CursorHold,BufLeave,FocusLost,WinLeave * :call Autoformat()

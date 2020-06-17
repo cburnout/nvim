@@ -9,6 +9,9 @@ vnoremap K :m '<-2<CR>gv
 map <silent> <F9> :source $HOME/.config/nvim/init.vim<CR>
 noremap <silent> <F8> :let @+=expand("%:p")<CR>
 
+
+map <silent> <F5> :call FormatEverything()<CR>
+
 function! GoToNextIndent(inc)
     " Get the cursor current position
     let currentPos = getpos('.')
