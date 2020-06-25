@@ -47,7 +47,8 @@ Plug 'Chiel92/vim-autoformat'
 
 " COLOR SCHEMES GALLOR
 Plug 'rafi/awesome-vim-colorschemes'
-
+Plug 'arcticicestudio/nord-vim'
+Plug 'crusoexia/vim-monokai'
 "verilog plugin
 Plug 'vhda/verilog_systemverilog.vim'
 
@@ -57,6 +58,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Isort
 Plug 'stsewd/isort.nvim'
 
+" Semeantic Highlighting
 " semshi
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
@@ -69,10 +71,8 @@ Plug 'junegunn/limelight.vim'
 " Vim Wiki
 Plug 'vimwiki/vimwiki'
 
-"" Vim Notes
-"Plug 'xolox/vim-notes'
-"" Vim Notes
-"Plug 'xolox/vim-misc'
+" Vim Whichkey
+Plug 'liuchengxu/vim-which-key'
 
 " Startify
 Plug 'mhinz/vim-startify'
@@ -95,5 +95,11 @@ Plug 'liuchengxu/vim-which-key'
 " vim ranger
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+
+" multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
+"Replthing
+Plug 'metakirby5/codi.vim'
 
 call plug#end()

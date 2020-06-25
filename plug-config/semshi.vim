@@ -10,10 +10,6 @@ function! MyHighlights() abort
     " Highlight spelling mistakes in red
     highlight SpellBad cterm=underline ctermfg=red guifg=red
 
-    " Do not use separate background color in sign column
-    highlight SignColumn guibg=bg
-    highlight SignColumn ctermbg=bg
-
     " Use underlined, bold, green for current tag
     highlight TagbarHighlight guifg=#b8bb26
     highlight TagbarHighlight gui=bold,underline
@@ -29,13 +25,13 @@ function! MyHighlights() abort
 
     " Use Gruvbox colors for python semshi semantic highlighter
     hi semshiGlobal          ctermfg=167 guifg=#fb4934
-    hi semshiImported        ctermfg=214 guifg=#fabd2f cterm=bold gui=bold
+    hi semshiImported        ctermfg=214 guifg=#FDD100 cterm=bold gui=bold
     hi semshiParameter       ctermfg=142  guifg=#98971a
     hi semshiParameterUnused ctermfg=106 guifg=#665c54
     hi semshiBuiltin         ctermfg=208 guifg=#fe8019
     hi semshiAttribute       ctermfg=108  guifg=fg
     hi semshiSelf            ctermfg=109 guifg=#85a598
-    hi semshiSelected        ctermfg=255 guifg=#ffffff ctermbg=240 guibg=#d7005f
+    hi semshiSelected        ctermfg=255 guifg=#ffffff ctermbg=240 guibg=#55555f
 endfunction
 augroup MyColors
     autocmd!

@@ -76,4 +76,10 @@ set wrap
 set linebreak
 set textwidth=0
 set wrapmargin=0
+
+set spelllang=en
+nnoremap <silent> <F9> :set spell!<cr>
+
 "autocmd CursorHold,BufLeave,FocusLost,WinLeave * :call Autoformat()
+set termguicolors
+colorscheme gruvbox 
