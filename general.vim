@@ -81,5 +81,9 @@ set spelllang=en
 nnoremap <silent> <F9> :set spell!<cr>
 
 "autocmd CursorHold,BufLeave,FocusLost,WinLeave * :call Autoformat()
-set termguicolors
-colorscheme gruvbox 
+"set termguicolors
+"if $TERM == "xterm-256color"
+"  set t_Co=256
+"endif
+"set termguicolors
+colorscheme focuspoint 

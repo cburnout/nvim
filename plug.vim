@@ -43,12 +43,13 @@ Plug 'tmhedberg/matchit'
 Plug 'Yggdroot/indentLine'
 
 "Autoformat
-Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 
 " COLOR SCHEMES GALLOR
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'crusoexia/vim-monokai'
+
 "verilog plugin
 Plug 'vhda/verilog_systemverilog.vim'
 
@@ -85,6 +86,9 @@ Plug 'kblin/vim-fountain'
 
 " vim quickscope
 Plug 'unblevable/quick-scope'
+
+" vim sneak
+Plug 'justinmk/vim-sneak'
 
 " vim floatterm
 Plug 'voldikss/vim-floaterm'
