@@ -6,7 +6,7 @@ let g:coc_global_extensions = [
             \ 'coc-git',
             \ 'coc-json',
             \ 'coc-yank',
-            \ 'coc-javascript'
+            \ 'coc-tsserver'
             \ ]
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> <A-PageDown> <Plug>(coc-diagnostic-prev)
