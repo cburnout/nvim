@@ -1,10 +1,12 @@
-" Coc Configlet g:coc_global_extensions = [
+" Coc Configlet 
+let g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-pairs',
             \ 'coc-python',
             \ 'coc-git',
             \ 'coc-json',
-            \ 'coc-yank'
+            \ 'coc-yank',
+            \ 'coc-javascript'
             \ ]
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> <A-PageDown> <Plug>(coc-diagnostic-prev)

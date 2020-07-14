@@ -72,6 +72,8 @@ Plug 'junegunn/limelight.vim'
 " Vim Wiki
 Plug 'vimwiki/vimwiki'
 
+Plug 'jceb/vim-orgmode'
+
 " Vim Whichkey
 Plug 'liuchengxu/vim-which-key'
 
