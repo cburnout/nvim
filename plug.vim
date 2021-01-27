@@ -18,6 +18,9 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
+" Vim fugative for git integration
+Plug 'tpope/vim-fugitive'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
