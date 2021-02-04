@@ -9,4 +9,5 @@ source $HOME/.config/nvim/plug-config/limelight.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 source $HOME/.config/nvim/plug-config/nerdcommenter.vim
 source $HOME/.config/nvim/plug-config/vimwiki.vim
+source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/keys/which-key.vim
