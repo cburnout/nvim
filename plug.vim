@@ -21,6 +21,9 @@ call plug#begin('~/.config/nvim/plugged')
 " Vim fugative for git integration
 Plug 'tpope/vim-fugitive'
 
+" rainbow braces
+Plug 'luochen1990/rainbow'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
