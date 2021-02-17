@@ -18,12 +18,6 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
-" Vim fugative for git integration
-Plug 'tpope/vim-fugitive'
-
-" rainbow braces
-Plug 'luochen1990/rainbow'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -113,5 +107,14 @@ Plug 'terryma/vim-multiple-cursors'
 
 "Replthing
 Plug 'metakirby5/codi.vim'
+
+" Vim fugative for git integration
+Plug 'tpope/vim-fugitive'
+
+" rainbow braces
+Plug 'luochen1990/rainbow'
+
+" nerd tree
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
