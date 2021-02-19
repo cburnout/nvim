@@ -50,6 +50,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'crusoexia/vim-monokai'
 
+" coq stuff
+Plug 'whonore/Coqtail'
+
 "verilog plugin
 Plug 'vhda/verilog_systemverilog.vim'
 
