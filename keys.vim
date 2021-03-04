@@ -32,3 +32,6 @@ function! GoToNextIndent(inc)
 endfunction
 nnoremap ni :call GoToNextIndent(1)<CR>
 nnoremap pi :call GoToNextIndent(-1)<CR>
+
+inoremap <C-H> <C-W>
+
