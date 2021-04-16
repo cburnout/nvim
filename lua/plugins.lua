@@ -36,15 +36,22 @@ return require('packer').startup(function()
     --use 'kosayoda/nvim-lightbulb'
     --use 'mfussenegger/nvim-jdtls'
     --use 'kabouzeid/nvim-lspinstall'
-
+ 
+    -- git
+    use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim'
+    },
+    config = function()
+        require('gitsigns').setup()
+    end
+    }
     -- completion
     use { 'hrsh7th/nvim-compe' }
 
     -- Vim dispatch
     use { 'tpope/vim-dispatch' }
-
-    -- Fugitive for Git
-    use { 'tpope/vim-fugitive' }
 
     -- Navigation
     use 'phaazon/hop.nvim'
@@ -69,8 +76,6 @@ return require('packer').startup(function()
     use {
     'glepnir/galaxyline.nvim',
         branch = 'main',
-        -- your statusline
-        config = function() require'my_statusline' end,
         -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
