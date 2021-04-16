@@ -53,12 +53,13 @@ local mode_color = {
 }
 
 local mode_names = {
-    n = "Normal",
-    i = "Insert",
-    v = "Visual",
-    [''] = "VisBlk",
-    V = "VISUAL",
-    R = "Replace"
+    n = "  Normal ",
+    i = "  Insert ",
+    v = "  Visual ",
+    [''] = "  V-Block",
+    V = "  VISUAL ",
+    R = "  Replace",
+    c = "  Command"
 }
 
 gls.left[1] = {

@@ -29,6 +29,8 @@ require('plugins/telescope')
 require('plugins/nvim-lspconfig')
 require('plugins/nvim-colorizer')
 require('plugins/galaxyline')
+require('plugins/nvim-tree')
+--require('plugins/nvim-treesitter')
 require('lsp')
 
 vim.cmd('colorscheme '.. 'lcars')

@@ -79,4 +79,7 @@ return require('packer').startup(function()
         -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+
+    -- bufferline
+    use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 end)
