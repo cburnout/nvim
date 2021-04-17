@@ -35,7 +35,7 @@ return require('packer').startup(function()
     --use 'onsails/lspkind-nvim'
     --use 'kosayoda/nvim-lightbulb'
     --use 'mfussenegger/nvim-jdtls'
-    --use 'kabouzeid/nvim-lspinstall'
+    use 'kabouzeid/nvim-lspinstall'
  
     -- git
     use {
@@ -81,5 +81,5 @@ return require('packer').startup(function()
     }
 
     -- bufferline
-    use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+    use {'cburnell/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 end)
