@@ -65,9 +65,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
-  ["nvim-bufferline.lua"] = {
+  ["nvim-bufferline"] = {
     loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/nvim-bufferline"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
