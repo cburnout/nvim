@@ -81,5 +81,5 @@ return require('packer').startup(function()
     }
 
     -- bufferline
-    use {'cburnell/nvim-bufferline', branch = "lcars", requires = 'kyazdani42/nvim-web-devicons'}
+    use {'cburnell/nvim-bufferline.lua', branch = "lcars", requires = 'kyazdani42/nvim-web-devicons'}
 end)

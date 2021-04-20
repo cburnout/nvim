@@ -1,5 +1,6 @@
--- vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = " "
+vim.cmd('colorscheme '.. 'lcars')
 
 vim.lsp.set_log_level("debug")
 
@@ -31,14 +32,13 @@ require('plugins/nvim-colorizer')
 require('plugins/galaxyline')
 require('plugins/nvim-tree')
 
--- require('plugins/nvim-bufferline')
-require('plugins/tabline')
-require('plugins/tabline')
+require('plugins/nvim-bufferline')
+-- require('plugins/tabline')
 require('plugins/nvim-treesitter')
 require('plugins/nvim-comment')
+require('plugins/nvim-autopairs')
 require('lsp')
 
-vim.cmd('colorscheme '.. 'lcars')
 vim.cmd('map  <F2>  :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . \'> trans<\' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>')
 require('lsp/python-lsp')
 require('lsp/lua-lsp')

@@ -31,11 +31,21 @@ vim.api.nvim_set_keymap('i', '<C-j>', '<Esc><C-w>j', {silent = true})
 vim.api.nvim_set_keymap('i', '<C-k>', '<Esc><C-w>k', {silent = true})
 vim.api.nvim_set_keymap('i', '<C-l>', '<Esc><C-w>l', {silent = true})
 
+vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {silent = true})
+vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {silent = true})
+vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', {silent = true})
+vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {silent = true})
+
 utils.map('n', '<leader>b', '<cmd>call Black()<cr>')
 
-utils.map('n', '<C-_>', '<cmd> CommentToggle<cr>')
-utils.map('v', '<C-_>', ':CommentToggle<cr>')
-utils.map('i', '<C-_>', ':CommentToggle<cr>')
+utils.map('n', '<leader>cc', ':CommentToggle<cr>')
+utils.map('v', '<leader>cc', ':CommentToggle<cr>')
+
+-- bufferline stuff guess im stuck with that
+-- nnoremap <silent>[b :BufferLineCycleNext<CR>
+-- nnoremap <silent>b] :BufferLineCyclePrev<CR>
+utils.map('n', '<Tab>', ':BufferLineCyclePrev<CR>')
+utils.map('n', '<S-Tab>', ':BufferLineCycleNext<CR>')
 
 -- HopPatern and chars doesnt work but the rest is good
 utils.map('n', '<leader>hw', '<cmd>HopWord<cr>')
@@ -43,3 +53,7 @@ utils.map('n', '<leader>hl', '<cmd>HopLine<cr>')
 vim.api.nvim_set_keymap('n', '<leader>hp', "<cmd>lua require'hop'.hint_patterns()<cr>", {})
 utils.map('n', '<leader>h1', '<cmd>HopChar1<cr>')
 utils.map('n', '<leader>h2', '<cmd>HopChar2<cr>')
+utils.map('n', '<leader>ls', ':ls<cr>:b')
+
+utils.map('n', '<C-PageUp>', ':bp<cr>')
+utils.map('n', '<C-PageUp>', ':bn<cr>')

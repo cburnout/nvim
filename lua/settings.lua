@@ -3,6 +3,7 @@ local utils = require('utils')
 local cmd = vim.cmd
 local indent = 4
 
+cmd 'set mouse=a'
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
 utils.opt('b', 'expandtab', true)

@@ -3,7 +3,6 @@ local diagnostic = require('galaxyline.provider_diagnostic')
 local condition = require('galaxyline.condition')
 local gls = gl.section
 local vcs = require('galaxyline.provider_vcs')
-local lspclient = require('galaxyline.provider_lsp')
 local fileinfo = require('galaxyline.provider_fileinfo')
 gl.short_line_list = {'NvimTree', 'vista', 'dbui', 'packer'}
 
@@ -186,7 +185,7 @@ gls.left[8] = {
     }
 }
 
-gls.left[9] = {DiagnosticInfo = {provider = 'DiagnosticInfo', highlight = {colors.bg, colors.info_yellow}}}
+gls.left[9] = {DiagnosticInfo = {provider = 'DiagnosticInfo', highlight = {colors.bg, colors.light_blue}}}
 
 gls.left[10] = {
     EndTypeFive = {
