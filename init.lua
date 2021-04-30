@@ -22,9 +22,6 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 -- Install plugins
 require('plugins')
 
--- Key mappings
-require('keymappings')
-
 require('plugins/nvim-compe')
 require('plugins/telescope')
 require('plugins/nvim-lspconfig')
@@ -37,9 +34,11 @@ require('plugins/nvim-bufferline')
 require('plugins/nvim-treesitter')
 require('plugins/nvim-comment')
 require('plugins/nvim-autopairs')
-require('lsp')
+require('plugins/gitsigns')
+--require('plugins/vim-vsnip')
 
 vim.cmd('map  <F2>  :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . \'> trans<\' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>')
+require('lsp')
 require('lsp/python-lsp')
 require('lsp/lua-lsp')
 -- require('nvim-telescope')
@@ -51,4 +50,6 @@ require('lsp/lua-lsp')
 -- require('config.completion')   -- completion
 -- require('config.fugitive')     -- fugitive
 
+-- Key mappings
+require('keymappings')
 

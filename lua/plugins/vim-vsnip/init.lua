@@ -1,0 +1,1 @@
+require('vim-vsnip').setup{}

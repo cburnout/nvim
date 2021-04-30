@@ -15,8 +15,7 @@ return require('packer').startup(function()
     use {'cburnell/nvcode-color-schemes.vim'}
     use 'norcalli/nvim-colorizer.lua'
     use 'sheerun/vim-polyglot'
-    -- use {'numirias/semshi', run = ':UpdateRemotePlugins'}
-    
+
     -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
@@ -24,7 +23,7 @@ return require('packer').startup(function()
     }
     -- Debugging
     use 'mfussenegger/nvim-dap'
-    
+
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
     use 'ryanoasis/vim-devicons'
@@ -36,19 +35,19 @@ return require('packer').startup(function()
     --use 'kosayoda/nvim-lightbulb'
     --use 'mfussenegger/nvim-jdtls'
     use 'kabouzeid/nvim-lspinstall'
- 
+
+
     -- git
     use {
     'lewis6991/gitsigns.nvim',
-    requires = {
-        'nvim-lua/plenary.nvim'
-    },
-    config = function()
-        require('gitsigns').setup()
-    end
+    requires = {'nvim-lua/plenary.nvim'}
     }
+
     -- completion
     use { 'hrsh7th/nvim-compe' }
+    use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
+--    use {"hrsh7th/vim-vsnip"}
+--    use {"rafamadriz/friendly-snippets"}
 
     -- Vim dispatch
     use { 'tpope/vim-dispatch' }
@@ -58,7 +57,7 @@ return require('packer').startup(function()
 
     -- Commenting
     use 'terrortylor/nvim-comment'
-    
+
     --Python
     use 'a-vrma/black-nvim'
     use'stsewd/isort.nvim'
@@ -71,7 +70,7 @@ return require('packer').startup(function()
 
     -- matching code bits
     use 'andymass/vim-matchup'
-    
+
     -- statusline
     use {
     'glepnir/galaxyline.nvim',
@@ -82,4 +81,6 @@ return require('packer').startup(function()
 
     -- bufferline
     use {'cburnell/nvim-bufferline.lua', branch = "lcars", requires = 'kyazdani42/nvim-web-devicons'}
+    -- foutain
+    use 'kblin/vim-fountain'
 end)

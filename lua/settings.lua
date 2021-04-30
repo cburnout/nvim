@@ -6,6 +6,7 @@ local indent = 4
 cmd 'set mouse=a'
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
+cmd 'autocmd BufWritePre * %s/\\s\\+$//e'
 utils.opt('b', 'expandtab', true)
 utils.opt('b', 'shiftwidth', indent)
 utils.opt('b', 'smartindent', true)

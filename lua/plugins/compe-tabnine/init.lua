@@ -1,0 +1,1 @@
+require('compe-tabnine').setup()

@@ -1,2 +1,1 @@
-require'lspconfig'.pyls.setup{}
-
+require'lspconfig'.pyls.setup{on_attach = require'lsp'.on_attach}

@@ -1,3 +1,4 @@
+-- vim.api.nvim_set_keymap('n', '<Space>hs', '<NOP>', {noremap = true, silent = true})
 local utils = require('utils')
 utils.map('n', '<C-h>', '<cmd>noh<CR>') -- Clear highlights
 utils.map('i', 'jk', '<Esc>')           -- jk to escape
@@ -36,7 +37,7 @@ vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {silent = true})
 vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', {silent = true})
 vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {silent = true})
 
-utils.map('n', '<leader>b', '<cmd>call Black()<cr>')
+utils.map('n', '<leader>cf', '<cmd>call Black()<cr>')
 
 utils.map('n', '<leader>cc', ':CommentToggle<cr>')
 utils.map('v', '<leader>cc', ':CommentToggle<cr>')
@@ -50,10 +51,13 @@ utils.map('n', '<S-Tab>', ':BufferLineCycleNext<CR>')
 -- HopPatern and chars doesnt work but the rest is good
 utils.map('n', '<leader>hw', '<cmd>HopWord<cr>')
 utils.map('n', '<leader>hl', '<cmd>HopLine<cr>')
-vim.api.nvim_set_keymap('n', '<leader>hp', "<cmd>lua require'hop'.hint_patterns()<cr>", {})
+vim.api.nvim_set_keymap('n', '<leader>hp', "<cmd>HopPattern<cr>", {})
 utils.map('n', '<leader>h1', '<cmd>HopChar1<cr>')
 utils.map('n', '<leader>h2', '<cmd>HopChar2<cr>')
-utils.map('n', '<leader>ls', ':ls<cr>:b')
+utils.map('n', '<leader>ls', ':ls<cr>:b ')
 
-utils.map('n', '<C-PageUp>', ':bp<cr>')
-utils.map('n', '<C-PageUp>', ':bn<cr>')
+vim.api.nvim_set_keymap('n', '<C-PageUp>',   ':bp<cr>', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-PageDown>', ':bn<cr>', {silent = true})
+
+vim.api.nvim_set_keymap('n', '<leader>dn', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {silent = true})
