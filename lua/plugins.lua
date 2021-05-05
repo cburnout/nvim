@@ -2,6 +2,8 @@ return require('packer').startup(function()
 
     -- Packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim', opt = true }
+    -- nvim reload for developing faster
+    use 'famiu/nvim-reload'
 
     -- Tree sitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -21,14 +23,21 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-    -- Debugging
+    -- These were all attempts for notes
+    -- use 'junegunn/fzf'
+    -- use 'junegunn/fzf.vim'
+    -- use 'BurntSushi/ripgrep'
+    -- Notes
+    -- use { "oberblastmeister/neuron.nvim", branch = "unstable"}
+    -- use { 'fiatjaf/neuron.vim'}
+    -- debugging
     use 'mfussenegger/nvim-dap'
 
-    -- Icons
+    -- icons
     use 'kyazdani42/nvim-web-devicons'
     use 'ryanoasis/vim-devicons'
 
-    -- LSP
+    -- lsp
     use { 'neovim/nvim-lspconfig' }
     --use 'glepnir/lspsaga.nvim'
     --use 'onsails/lspkind-nvim'
@@ -36,6 +45,8 @@ return require('packer').startup(function()
     --use 'mfussenegger/nvim-jdtls'
     use 'kabouzeid/nvim-lspinstall'
 
+    -- languages
+    use {'omnisharp/omnisharp-vim'}
 
     -- git
     use {
@@ -46,19 +57,19 @@ return require('packer').startup(function()
     -- completion
     use { 'hrsh7th/nvim-compe' }
     use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
---    use {"hrsh7th/vim-vsnip"}
---    use {"rafamadriz/friendly-snippets"}
+   use {"hrsh7th/vim-vsnip"}
+   use {"rafamadriz/friendly-snippets"}
 
-    -- Vim dispatch
+    -- vim dispatch
     use { 'tpope/vim-dispatch' }
 
-    -- Navigation
+    -- navigation
     use 'phaazon/hop.nvim'
 
-    -- Commenting
+    -- commenting
     use 'terrortylor/nvim-comment'
 
-    --Python
+    --python
     use 'a-vrma/black-nvim'
     use'stsewd/isort.nvim'
 

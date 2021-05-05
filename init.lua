@@ -22,8 +22,13 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 -- Install plugins
 require('plugins')
 
+require('plugins/nvim-reload')
+
 require('plugins/nvim-compe')
 require('plugins/telescope')
+require('plugins/fzf')
+require('plugins/ripgrep')
+-- require('plugins/neuron-nvim')
 require('plugins/nvim-lspconfig')
 require('plugins/nvim-colorizer')
 require('plugins/galaxyline')
@@ -41,14 +46,7 @@ vim.cmd('map  <F2>  :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 require('lsp')
 require('lsp/python-lsp')
 require('lsp/lua-lsp')
--- require('nvim-telescope')
--- Another option is to groups configuration in one folder
--- require('config')
-
--- OR you can invoke them individually here
--- require('config.colorscheme')  -- color scheme
--- require('config.completion')   -- completion
--- require('config.fugitive')     -- fugitive
+require('lsp/omnisharp-lsp')
 
 -- Key mappings
 require('keymappings')
