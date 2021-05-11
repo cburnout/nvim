@@ -69,6 +69,8 @@ return require('packer').startup(function()
     -- commenting
     use 'terrortylor/nvim-comment'
 
+    -- Formatting
+    use 'sbdchd/neoformat'
     --python
     use 'a-vrma/black-nvim'
     use'stsewd/isort.nvim'
