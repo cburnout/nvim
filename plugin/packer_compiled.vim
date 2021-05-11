@@ -83,14 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/friendly-snippets"
   },
-  fzf = {
-    loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/fzf"
-  },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/fzf.vim"
-  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
@@ -110,14 +102,6 @@ _G.packer_plugins = {
   ["isort.nvim"] = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/isort.nvim"
-  },
-  ["neuron.nvim"] = {
-    loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/neuron.nvim"
-  },
-  ["neuron.vim"] = {
-    loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/neuron.vim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -203,10 +187,6 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ripgrep = {
-    loaded = true,
-    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/ripgrep"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -38,21 +38,57 @@ vim.api.nvim_set_keymap('i', '<A-j>', '<Esc><C-w>j', {silent = true})
 vim.api.nvim_set_keymap('i', '<A-k>', '<Esc><C-w>k', {silent = true})
 vim.api.nvim_set_keymap('i', '<A-l>', '<Esc><C-w>l', {silent = true})
 
-vim.api.nvim_set_keymap('i', '<A-h>', '<Left>', {silent = true})
-vim.api.nvim_set_keymap('i', '<A-j>', '<Down>', {silent = true})
-vim.api.nvim_set_keymap('i', '<A-k>', '<Up>', {silent = true})
-vim.api.nvim_set_keymap('i', '<A-l>', '<Right>', {silent = true})
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif vim.fn.call("vsnip#available", {1}) == 1 then
+    return t "<Plug>(vsnip-expand-or-jump)"
+  elseif check_back_space() then
+    return t "<Down>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
+    return t "<Plug>(vsnip-jump-prev)"
+  else
+    return t "<Up>"
+  end
+end
+
+-- vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
+vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {silent = true})
+vim.api.nvim_set_keymap('i', '<C-j>', 'v:lua.tab_complete()', {silent = true, expr = true})
+vim.api.nvim_set_keymap('i', '<C-k>', 'v:lua.s_tab_complete()', {silent = true, expr = true})
+vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {silent = true})
 
 utils.map('n', '<leader>cf', '<cmd>call Black()<cr>')
 
 utils.map('n', '<leader>cc', ':CommentToggle<cr>')
 utils.map('v', '<leader>cc', ':CommentToggle<cr>')
-
--- bufferline stuff guess im stuck with that
--- nnoremap <silent>[b :BufferLineCycleNext<CR>
--- nnoremap <silent>b] :BufferLineCyclePrev<CR>
--- utils.map('n', '<Tab>', ':BufferLineCyclePrev<CR>')
--- utils.map('n', '<S-Tab>', ':BufferLineCycleNext<CR>')
 
 -- HopPatern and chars doesnt work but the rest is good
 utils.map('n', '<leader>hw', '<cmd>HopWord<cr>')
@@ -70,3 +106,10 @@ vim.api.nvim_set_keymap('n', '<A-PageDown>', ':BufferLineMoveNext<cr>', {silent 
 
 vim.api.nvim_set_keymap('n', '<leader>dn', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true})
 vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {silent = true})
+
+-- Better nav for omnicomplete
+-- vim.api.nvim_set_keymap('i', '<c-j>', '(\"\\<C-n>\")', {expr = true})
+-- vim.api.nvim_set_keymap('i', '<c-k>', '(\"\\<C-p>\")', {expr = true})
+-- vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
+-- vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+vim.cmd('set whichwrap+=<,>,[,]')
