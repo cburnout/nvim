@@ -103,6 +103,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/isort.nvim"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
@@ -183,6 +195,10 @@ _G.packer_plugins = {
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/cburn/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  popfix = {
+    loaded = true,
+    path = "/home/cburn/.local/share/nvim/site/pack/packer/start/popfix"
   },
   ["popup.nvim"] = {
     loaded = true,

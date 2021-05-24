@@ -16,6 +16,9 @@ vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silen
 -- Telescope keybinds
 
 utils.map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
+utils.map('n', '<leader>fr', '<cmd>Telescope lsp_references<cr>')
+utils.map('n', '<leader>fc', '<cmd>Telescope lsp_code_actions<cr>')
+utils.map('n', '<leader>fd', '<cmd>Telescope lsp_document_diagnostics<cr>')
 utils.map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 utils.map('n', '<leader>fb', '<cmd>Telescope buffer<cr>')
 utils.map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
