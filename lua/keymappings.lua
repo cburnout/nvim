@@ -81,6 +81,8 @@ end
 -- vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {silent = true})
+vim.api.nvim_set_keymap('i', '<Down>', 'v:lua.tab_complete()', {silent = true, expr = true})
+vim.api.nvim_set_keymap('i', '<Up>', 'v:lua.s_tab_complete()', {silent = true, expr = true})
 vim.api.nvim_set_keymap('i', '<C-j>', 'v:lua.tab_complete()', {silent = true, expr = true})
 vim.api.nvim_set_keymap('i', '<C-k>', 'v:lua.s_tab_complete()', {silent = true, expr = true})
 vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {silent = true})
