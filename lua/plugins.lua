@@ -39,11 +39,13 @@ return require('packer').startup(function()
 
     -- lsp
     use { 'neovim/nvim-lspconfig' }
-    --use 'glepnir/lspsaga.nvim'
-    --use 'onsails/lspkind-nvim'
+    -- use 'glepnir/lspsaga.nvim'
+    use 'onsails/lspkind-nvim'
     --use 'kosayoda/nvim-lightbulb'
     --use 'mfussenegger/nvim-jdtls'
     use 'kabouzeid/nvim-lspinstall'
+    use 'RishabhRD/popfix'
+    -- use 'RishabhRD/nvim-lsputils'
 
     -- languages
     use {'omnisharp/omnisharp-vim'}
