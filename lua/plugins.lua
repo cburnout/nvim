@@ -73,9 +73,11 @@ return require('packer').startup(function()
 
     -- Formatting
     use 'sbdchd/neoformat'
-    --python
+    -- python
     use 'a-vrma/black-nvim'
-    use'stsewd/isort.nvim'
+    use 'stsewd/isort.nvim'
+    -- Coq
+    use 'whonore/Coqtail'
 
     -- paren pairing
     use 'windwp/nvim-autopairs'
